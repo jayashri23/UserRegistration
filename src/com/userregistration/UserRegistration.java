@@ -15,8 +15,19 @@ public class UserRegistration {
             System.out.println("Not Valid First Name");
         }
     }
+    public static void emailId(){
+        System.out.println("Enter the Email Id :");
+        String emailId = scanner.nextLine();
+        //[a-z]{1,}[.]?[a-z]{1,}?[@][a-z]{1,}[\\.][a-z]{1,}.?[a-z]?$
+        if(Pattern.matches("^[a-z+.]+@(.+)$",emailId)){
+            System.out.println("Valid Email");
+        }else {
+            System.out.println("Not Valid Email");
+        }
+    }
     public static void main(String[] args) {
         firstName();
+        emailId();
     }
 }
 
