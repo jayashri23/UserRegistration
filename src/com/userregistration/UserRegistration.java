@@ -37,9 +37,19 @@ public class UserRegistration {
     }
     public static void passWord() {
         System.out.println("Enter the Password :");
+        String passWord = scanner.nextLine();
+        //[a-z]{1,}[.]?[a-z]{1,}?[@][a-z]{1,}[\\.][a-z]{1,}.?[a-z]?$
+        if (Pattern.matches("^[A-Za-z0-9]{8,}$", passWord)) {
+            System.out.println("Valid  Password ");
+        } else {
+            System.out.println("Not Valid Password ");
+        }
+    }
+    public static void clearAllEmailSample() {
+        System.out.println("Enter the  valid email :");
         String emailId = scanner.nextLine();
         //[a-z]{1,}[.]?[a-z]{1,}?[@][a-z]{1,}[\\.][a-z]{1,}.?[a-z]?$
-        if (Pattern.matches("^[a-z]{8,}$", emailId)) {
+        if (Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$", emailId)) {
             System.out.println("Valid  Password ");
         } else {
             System.out.println("Not Valid Password ");
@@ -51,6 +61,7 @@ public class UserRegistration {
         emailId();
         mobileFormat();
         passWord();
+        clearAllEmailSample();
     }
 }
 
