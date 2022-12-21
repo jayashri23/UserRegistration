@@ -38,7 +38,7 @@ public class UserRegistration {
     public static void passWord() {
         System.out.println("Enter the Password :");
         String passWord = scanner.nextLine();
-        if (Pattern.matches("^[A-Za-z0-9]{8,}$", passWord)) {
+        if (Pattern.matches("[A-Za-z0-9](?=.*[-+_!@#$%^&*.,?]).{8,}", passWord)) {
             System.out.println("Valid  Password ");
         } else {
             System.out.println("Not Valid Password ");
