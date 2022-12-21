@@ -15,8 +15,19 @@ public class UserRegistration {
             System.out.println("Not Valid First Name");
         }
     }
+
+    public static void lastName(){
+        System.out.println("Enter the First Name:");
+        String firstName =scanner.nextLine();
+        if (Pattern.matches("[A-Z]{1}[a-z]{2}",firstName) == true){
+            System.out.println("Valid Last Name");
+        }else {
+            System.out.println("Not Valid Last Name");
+        }
+    }
     public static void main(String[] args) {
         firstName();
+        lastName();
     }
 }
 
