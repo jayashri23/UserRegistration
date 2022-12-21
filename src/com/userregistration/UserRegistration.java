@@ -27,18 +27,30 @@ public class UserRegistration {
     }
     public static void mobileFormat(){
         System.out.println("Enter the Mobile number :");
-        String emailId = scanner.nextLine();
+        String mobilef = scanner.nextLine();
         //[a-z]{1,}[.]?[a-z]{1,}?[@][a-z]{1,}[\\.][a-z]{1,}.?[a-z]?$
-        if(Pattern.matches("^[91]{2}\\s[0-9]{10}$",emailId)){
+        if(Pattern.matches("^[91]{2}\\s[0-9]{10}$",mobilef)){
             System.out.println("Valid Mobile Number ");
         }else {
             System.out.println("Not Valid Mobile Number");
         }
     }
+    public static void passWord() {
+        System.out.println("Enter the Password :");
+        String emailId = scanner.nextLine();
+        //[a-z]{1,}[.]?[a-z]{1,}?[@][a-z]{1,}[\\.][a-z]{1,}.?[a-z]?$
+        if (Pattern.matches("^[A-Za-z]{8,}$", emailId)) {
+            System.out.println("Valid  Password ");
+        } else {
+            System.out.println("Not Valid Password ");
+        }
+    }
+
     public static void main(String[] args) {
         firstName();
         emailId();
         mobileFormat();
+        passWord();
     }
 }
 
